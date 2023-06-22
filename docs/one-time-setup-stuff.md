@@ -19,7 +19,6 @@
         * Install this plugin and restart IntelliJ
 * [helm] 3.x
     * macOS: `brew install kubernetes-helm`
-    * [Debian/Ubuntu]
 
 ---
 
@@ -84,10 +83,9 @@ Then you should be ready to start Terraforming!
 [homebrew]:https://brew.sh/
 [gcloud]:https://cloud.google.com/sdk/docs/install-sdk
 [gke-gcloud-auth-plugin]:https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
-[kubectl]:https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-homebrew-on-macos
+[kubectl]:https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos
 [native package management]:https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
 [ktx]:https://github.com/heptiolabs/ktx
-[Linux-install]:https://docs.aws.amazon.com/eks/latest/userguide/install-gke-gcloud-auth-plugin.html
 [keybase]:https://keybase.io/docs/the_app/install_macos
 [Terraform and HCL]:https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl
 [IntelliJ]:https://www.jetbrains.com/idea/
