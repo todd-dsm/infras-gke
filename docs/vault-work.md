@@ -19,7 +19,6 @@ vault login -method=gcp \
     credentials=@path/to/signer/credentials.json
 ```
 
-
 [github auth method]:https://www.vaultproject.io/docs/auth/github
 [cloud auth method]:https://www.vaultproject.io/docs/auth/gcp
 [Via the CLI]:https://www.vaultproject.io/docs/auth/gcp#via-the-cli-helper

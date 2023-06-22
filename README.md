@@ -24,7 +24,7 @@ default  True       user@domain.tld  projectName  us-west2-a            us-west2
 
 If this all looks good you're ready to start Terraforming.
 
-`make tf-init`, `make plan` and `make apply` or, just `make all`. 
+`make init`, `make plan` and `make apply` or, just `make all`. 
 
 ---
 
