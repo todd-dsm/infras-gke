@@ -10,7 +10,7 @@
 terraform {
   required_providers {
     google = {
-      source  = "hashicorp/google"
+      source = "hashicorp/google"
       version = "~> 4.70.0"
     }
   }
@@ -20,7 +20,7 @@ terraform {
 }
 
 provider "google" {
-  #prefix  = "env/state"
   project = "infras-gke-stage"
-  #region      = "us-west2"
+  #prefix = "env/state"
+  #region = "us-west2"
 }
