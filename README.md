@@ -1,6 +1,6 @@
 # infras-gke
 
-This is a simple representation of a GKE cluster. The code herein is raw and for the purpose of experimenting with some pipeline stuff; it is not for perfect GKE code, yet.
+This is a simple representation of a GKE/Autopilot cluster. The code herein is raw and for the purpose of experimenting with some pipeline stuff; it is not for perfect GKE code, yet.
 
 ---
 
@@ -10,7 +10,7 @@ Check the docs for [one-time setup steps].
 
 Source-in the project variables to your environment:
 
-`source scripts/setup/build.env <stage|prod>`
+`source build.env <stage|prod>`
 
 Set the project specifics in the shell and check the output:
 
@@ -24,7 +24,9 @@ default  True       user@domain.tld  projectName  us-west2-a            us-west2
 
 If this all looks good you're ready to start Terraforming.
 
-`make init`, `make plan` and `make apply` or, just `make all`. 
+`make init`, `make plan` and `make apply` or, just `make all`.
+
+When you're done: `make clean` and follow the instructions.
 
 ---
 
