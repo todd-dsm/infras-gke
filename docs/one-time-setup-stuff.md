@@ -1,6 +1,29 @@
 # one-time-setup-stuff
 
-There are a few important pregame steps:
+## Install Required Programs
+
+* [homebrew] - the macOS package manager
+* [gcloud]
+    * macOS: `brew install google-cloud-sdk`
+    * Then install the [gke-gcloud-auth-plugin]: `gcloud components install gke-gcloud-auth-plugin -q` 
+* [keybase] - used to cryptographically validate the Terraform package
+    * macOS: `brew install --cask keybase`
+    * Install it, open it and configure it.
+    * **Leave `keybase` running during the Terraform install**
+* [Terraform] (but I just use `tfenv`)
+    * `brew install tfenv` [quickstart]
+* [IntelliJ] Community Edition
+    * macOS: `brew install intellij-idea-ce`
+        * install the Terraform plugin
+        * Preferences > Plugins > Search: [Terraform and HCL]
+        * Install this plugin and restart IntelliJ
+* [helm] 3.x
+    * macOS: `brew install kubernetes-helm`
+    * [Debian/Ubuntu]
+
+---
+
+## Configuration Steps:
 
 1 - Configure [ADC credentials] for local Terraform use; this is the quick-n-dirty method but it's completely safe.
 
@@ -51,12 +74,26 @@ default  True       user@domain.tld  projectName  us-west2-a            us-west2
 5 - Create a project bucket for the Terraform state files:
 
 ```
-source build.env stage
 scripts/setup/create-project-bucket.sh
 ```
 
+Then you should be ready to start Terraforming!
+
 <!--- URLs to supporting Docs --->
 
+[homebrew]:https://brew.sh/
+[gcloud]:https://cloud.google.com/sdk/docs/install-sdk
+[gke-gcloud-auth-plugin]:https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+[kubectl]:https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-homebrew-on-macos
+[native package management]:https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
+[ktx]:https://github.com/heptiolabs/ktx
+[Linux-install]:https://docs.aws.amazon.com/eks/latest/userguide/install-gke-gcloud-auth-plugin.html
+[keybase]:https://keybase.io/docs/the_app/install_macos
+[Terraform and HCL]:https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl
+[IntelliJ]:https://www.jetbrains.com/idea/
+[helm]:https://helm.sh/docs/intro/install/#from-homebrew-macos
+[Terraform]:https://www.hashicorp.com/blog/announcing-hashicorp-homebrew-tap
+[quickstart]:https://gist.github.com/todd-dsm/1dc120506e89ec36d4d9a05ccb93f68c
 [ADC credentials]:https://cloud.google.com/docs/authentication/application-default-credentials
 [service accounts]:https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference#authentication-configuration
 [local file]:https://cloud.google.com/docs/authentication/application-default-credentials#personal
