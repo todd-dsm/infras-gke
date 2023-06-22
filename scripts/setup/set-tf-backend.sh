@@ -38,7 +38,7 @@ cat > provider.tf <<EOF
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "~> $gcpProviderVersion"
     }
   }
@@ -48,9 +48,9 @@ terraform {
 }
 
 provider "google" {
-  #prefix  = "env/state"
-  project     = "$TF_VAR_project"
-  #region      = "us-west2"
+  project = "$TF_VAR_project"
+  #prefix = "env/state"
+  #region = "us-west2"
 }
 EOF
 
