@@ -13,7 +13,7 @@ prep:	## Prepare for the build
 	@scripts/setup/set-project-params.sh
 	@printf '\n\n%s\n\n' "IF THIS LOOKS CORRECT YOU ARE CLEAR TO TERRAFORM"
 
-all:    init plan apply 
+all:    init plan apply creds
 
 init:	## Initialize the build
 	terraform init -get=true -backend=true -reconfigure
@@ -47,7 +47,7 @@ clean:	## Clean WARNING Message
 clean-all:	## Destroy Terraformed resources and all generated files with output log
 	terraform apply -destroy -auto-approve -no-color 2>&1 | \
 	 	tee /tmp/tf-$(TF_VAR_myProject)-destroy.out
-	rm -f "$(filePlan)"
+	rm -f "$(KUBECONFIG)"
 	rm -rf .terraform/ .terraform.lock.hcl
 
 #-----------------------------------------------------------------------------#
