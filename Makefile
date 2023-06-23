@@ -28,6 +28,9 @@ apply:  ## Build Terraform project with output log
 		-input=false 2>&1 | \
 		tee /tmp/tf-$(TF_VAR_myProject)-apply.out 
 
+creds:	## Pull KUBECONFIG file(s) and select one
+	@scripts/get-creds.sh 
+
 # ------------------------ 'make all' ends here ------------------------------#
 
 clean:	## Clean WARNING Message

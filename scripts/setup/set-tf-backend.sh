@@ -48,7 +48,7 @@ terraform {
 }
 
 provider "google" {
-  project = "$TF_VAR_project"
+  project = "$TF_VAR_project_id"
   #prefix = "env/state"
   #region = "us-west2"
 }
